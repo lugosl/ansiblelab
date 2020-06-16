@@ -1,0 +1,18 @@
+---
+- hosts: webservers
+  tasks:
+    - name: Make sure a ntp service is running
+      systemd: state=started name=ntp
+    - name: Make sure a apache2 service is running
+      systemd: state=started name=apache2
+    - name: Make sure a cron service is running
+      systemd: state=started name=cron
+    - name: Make sure a syslog service is running
+      systemd: state=started name=rsyslog
+    - name: Make sure a ssh service is running
+      systemd: state=started name=ssh
+    - name: Make sure a docker service is running
+      systemd: state=started name=docker
+
+
+

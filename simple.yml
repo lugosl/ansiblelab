@@ -1,0 +1,6 @@
+---
+- hosts: webservers
+  tasks:
+    - name: Make sure a ntp service is running
+      debug:
+        msg: "They said!"

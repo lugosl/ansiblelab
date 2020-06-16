@@ -1,0 +1,5 @@
+---
+- hosts: webservers
+  tasks:
+    - name: install Apache2 
+      apt: name=apache2 update_cache=yes state=latest
